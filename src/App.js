@@ -25,11 +25,14 @@ componentWillMount(){
     }
   ]});
 }
+handleAddProject(project){
+  console.log(project);
+}
 
   render() {
     return (
       <div className="App">
-       <AddProjects/>
+       <AddProjects addProjects = {this.handleAddProject.bind(this)} />
        <Projects projects = {this.state.projects} />
       </div>
     );
