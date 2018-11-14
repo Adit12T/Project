@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
 
 class AddProjects extends Component {
  constructor(){
@@ -16,6 +17,7 @@ class AddProjects extends Component {
            alert('Title is required');
        } else {
            this.setState({newProject:{
+               id: uuid.v4(),
                title: this.refs.title.value,
                category: this.refs.category.value
            }}, function(){
