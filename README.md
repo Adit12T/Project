@@ -10,7 +10,7 @@ TypeScript and Vite**, tested with **Vitest and Testing Library**.
 This was a 2018 React 16 exercise using class components, jQuery AJAX and string refs. Version 2 is
 a rewrite with hooks, typed data, input validation and a resilient API client.
 
-**Live demo:** https://adit12t.github.io/Project/
+**Live demo:** https://adit12t.github.io/demos/Project/
 
 ## Features
 
