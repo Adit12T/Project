@@ -1,44 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Tracker
 
-## Available Scripts
+[![CI](https://github.com/Adit12T/Project/actions/workflows/ci.yml/badge.svg)](https://github.com/Adit12T/Project/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/Adit12T/Project/actions/workflows/codeql.yml/badge.svg)](https://github.com/Adit12T/Project/actions/workflows/codeql.yml)
 
-In the project directory, you can run:
+A lightweight project planner: add projects with a category, status and due date, search and filter
+them, see what is overdue, and follow a live task feed from an external API. Built with **React 19,
+TypeScript and Vite**, tested with **Vitest and Testing Library**.
 
-### `npm start`
+This was a 2018 React 16 exercise using class components, jQuery AJAX and string refs. Version 2 is
+a rewrite with hooks, typed data, input validation and a resilient API client.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Live demo:** https://adit12t.github.io/Project/
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Projects:** title, category, status (Planned, In progress, Done) and an optional due date.
+- **Validation:** titles are required, at most 80 characters, and must be unique (case-insensitive).
+- **Search and filters** by text, category and status, combined.
+- **Overdue highlighting** for unfinished projects past their due date.
+- **Status counts** in the header, announced to screen readers when they change.
+- **Undo delete**, restoring the project to its original position.
+- **Saved in the browser:** saved data is checked field by field when loaded, so tampered or old data
+  falls back to the samples instead of breaking the page.
+- **Task feed** from JSONPlaceholder with loading and error states, an 8-second timeout, cancellation
+  when the component unmounts, response validation, and a **Try again** button.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run it
 
-### `npm run build`
+```bash
+npm install
+npm run dev        # http://localhost:5173
+npm test           # 8 tests: rules, storage, user flows and API failures
+npm run build
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copyright © 2026 Aditya Tripathi. All rights reserved. The code is published for viewing only; see
+[LICENSE](LICENSE). Security reports: see [SECURITY.md](SECURITY.md).
